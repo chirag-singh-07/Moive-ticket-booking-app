@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="../css/movie-detail.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="navbar">
+          <a href="#" class="navbar-brand">
+            <img src="../images/logo.png" alt="logo" />
+            <!-- okey -->
+          </a>
+
+          <nav>
+            <ul class="navbar-nav">
+              <li><a href="../index.html" class="navbar-link">Home</a></li>
+              <li><a href="#category" class="navbar-link">Category</a></li>
+              <li><a href="#live" class="navbar-link indicator">Live</a></li>
+            </ul>
+          </nav>
+
+          <div class="navbar-actions">
+            <form action="#" class="navbar-form">
+              <input
+                type="text"
+                class="navbar-form-search"
+                name="search"
+                placeholder="I'am looking for..."
+              />
+
+              <button class="navbar-form-btn">
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+
+              <button class="navbar-form-close">
+                <ion-icon name="close-circle-outline"></ion-icon>
+              </button>
+            </form>
+            <botton class="navbar-search-btn">
+              <ion-icon name="search-outline"></ion-icon>
+            </botton>
+
+            <a href="./login.html" class="navbar-signin" id="signup-btn">
+              <span>Sign in</span>
+              <!-- <ion-icon name="log-in-outline"></ion-icon> -->
+            </a>
+
+            <a href="#" class="navbar-signin" id="user-icon">
+              <span id="user-name">name</span>
+              <ion-icon name="person-outline"></ion-icon>
+            </a>
+
+            <a href="#" class="navbar-signin" id="login-btn">
+              <span>Logout</span>
+              <ion-icon name="log-in-outline"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="movie-detail">
+        <img id="movie-poster" alt="Movie Poster" />
+
+        <!-- ✅ Movie Info and Seats on Right -->
+        <div class="movie-info">
+          <h2 id="movie-title"></h2>
+          <p><strong>Genre:</strong> <span id="movie-genre"></span></p>
+          <p><strong>Year:</strong> <span id="movie-year"></span></p>
+          <p><strong>Rating:</strong> <span id="movie-rating"></span></p>
+
+          <!-- ✅ Seat Layout -->
+          <div class="seats-container">
+            <h3>Select Your Seats:</h3>
+            <div class="seats" id="seats">
+              <!-- JS will generate seats -->
+            </div>
+          </div>
+
+          <!-- ✅ Book Button -->
+          <button id="book-ticket-btn">Book Ticket</button>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="../images/logo.png" alt="" class="footer-logo" />
+            <p class="slogan">Movies tickets booking webiste</p>
+
+            <div class="social-link">
+              <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <ul>
+              <!-- <h4 class="link-heading">CineFlix</h4> -->
+              <li class="link-item"><a href="#">About us</a></li>
+              <li class="link-item"><a href="#">My profile</a></li>
+              <li class="link-item"><a href="#">Pricing plans</a></li>
+              <li class="link-item"><a href="#">Contacts</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-copyright">
+          <div class="copyright">
+            <p>&copy; copyright 2025 CineFlix | Neha Rajput</p>
+          </div>
+
+          <div class="wrapper">
+            <!-- <a href="#">Privacy Policy</a> -->
+            <a href="#">Terms & Conditions</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="../js/movie-detail.js"></script>
+    <script src="../js/movies-pass.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </body>
+</html>
