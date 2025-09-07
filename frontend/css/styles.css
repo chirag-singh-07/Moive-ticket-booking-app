@@ -728,3 +728,122 @@ input ~ .checked-radio-bg {
     max-width: 100%;
   }
 }
+
+/* =======================
+   Modal (Payment / Ticket)
+   ======================= */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-content {
+  background: var(--oxford-blue);
+  color: var(--off-white);
+  padding: 30px;
+  border-radius: 20px;
+  width: 420px;
+  max-width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  animation: slideIn 0.3s ease;
+}
+
+.modal-content h2, 
+.modal-content h3 {
+  margin-bottom: 15px;
+  color: var(--white);
+  font-weight: var(--fw-7);
+  text-align: center;
+}
+
+#ticket-summary {
+  background: var(--rich-black-fogra-30);
+  border: 1px solid var(--oxford-blue-50);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+
+#payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#payment-form label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-6);
+  color: var(--off-white);
+}
+
+#payment-form input {
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--rich-black-fogra-29);
+  border: 1px solid var(--oxford-blue-50);
+  color: var(--white);
+  font-size: var(--fs-sm);
+}
+
+#payment-form input:focus {
+  border-color: var(--light-azure);
+  box-shadow: 0 0 8px var(--light-azure);
+}
+
+#payment-form button {
+  padding: 12px;
+  border-radius: 12px;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#payment-form button[type="submit"] {
+  background: var(--light-azure);
+  color: var(--white);
+}
+
+#payment-form button[type="submit"]:hover {
+  background: var(--azure);
+  transform: scale(1.05);
+}
+
+#cancel-payment {
+  background: var(--oxford-blue);
+  color: var(--off-white);
+}
+
+#cancel-payment:hover {
+  background: var(--live-indicator);
+  transform: scale(1.05);
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
